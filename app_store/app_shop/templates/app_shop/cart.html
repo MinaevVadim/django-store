@@ -1,0 +1,71 @@
+{% extends 'app_shop/base.html' %}
+{% block content %}
+{% load static %}
+<body class="Site">
+  <div class="Middle Middle_top">
+    <div class="Middle-top">
+      <div class="wrap">
+        <div class="Middle-header">
+          <h1 class="Middle-title">Корзина
+          </h1>
+          <ul class="breadcrumbs Middle-breadcrumbs">
+            <li class="breadcrumbs-item"><a href="{% url 'main' %}">home</a>
+            </li>
+            <li class="breadcrumbs-item breadcrumbs-item_current"><span>Корзина</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="Section">
+      <div class="wrap">
+          {% for i in cart %}  
+          <div class="Cart-product">
+            <div class="Cart-block Cart-block_row">
+              <div class="Cart-block Cart-block_pict"><a class="Cart-pict" href="{% url 'product' i.product.id %}"><img class="Cart-img" src="/media/{{ i.product.file }}" alt="card.jpg"/></a>
+              </div>
+              <div class="Cart-block Cart-block_info"><a class="Cart-title" href="{% url 'product' i.product.id %}">{{ i.product.name }}</a>
+                <div class="Cart-desc">{{ i.product.description }}
+                </div>
+              </div>
+              <div class="Cart-block Cart-block_price">
+                <div class="Cart-price">{{ i.price }}
+                </div>
+              </div>
+            </div>
+            <div class="Cart-block Cart-block_row">
+              <div class="Cart-block Cart-block_seller">
+              </div>
+              <div class="Cart-block Cart-block_amount">
+                <div class="Cart-amount">
+                  <form class="form Cart" action="{% url 'cart' i.product.id %}" method="post">
+                  {% csrf_token %}
+                  <div class="Amount">
+                    <button class="Amount-remove" type="button">
+                    </button>
+                        <input class="Amount-input form-input" name="count_good_basket" type="text" value="{{ i.quantity }}"/>
+                    <button class="Amount-add" type="button">
+                    </button>
+                  </div>
+                    <div class="Cart-block"><button type="submit" class="btn btn-secondary btn-sm">Обновить количество</button></div>
+                  </form>
+                </div>
+              </div>
+              <div class="Cart-block Cart-block_delete"><a class="Cart-delete" href="{% url 'cart_delete' i.product.id %}"><img src="{% static 'img/icons/card/delete.svg' %}" alt="delete.svg"/></a>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+          <div class="Cart-total">
+            <div class="Cart-block Cart-block_total">
+              <strong class="Cart-title">Итого:
+              </strong><span class="Cart-price">{{ common_price }} руб</span>
+            </div>
+            <div class="Cart-block"><a class="btn btn_success btn_lg" href="{% url 'order' %}">Оформить заказ</a>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</body>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'app_shop/base.html' %}
+{% block content %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Регистрация</title>
+</head>
+<body>
+<h2>Регистрация</h2>
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <br><button class="btn btn-primary" type="submit">Зарегистрироваться</button>
+</form>
+</body>
+</html>
+{% endblock %}

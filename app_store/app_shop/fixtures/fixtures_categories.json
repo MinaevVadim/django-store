@@ -1,0 +1,47 @@
+[
+{
+    "model": "app_shop.category",
+    "pk": 3,
+    "fields": {
+        "is_delete": false,
+        "name": "Телевизоры",
+        "parent": null,
+        "active_category": "1",
+        "file_icon": "files_icon/1_7oLigmF.svg",
+        "lft": 1,
+        "rght": 2,
+        "tree_id": 1,
+        "level": 0
+    }
+},
+{
+    "model": "app_shop.category",
+    "pk": 4,
+    "fields": {
+        "is_delete": false,
+        "name": "Смартфоны",
+        "parent": null,
+        "active_category": "1",
+        "file_icon": "files_icon/2_h3A2Xb9.svg",
+        "lft": 1,
+        "rght": 2,
+        "tree_id": 2,
+        "level": 0
+    }
+},
+{
+    "model": "app_shop.category",
+    "pk": 5,
+    "fields": {
+        "is_delete": false,
+        "name": "Ноутбуки",
+        "parent": null,
+        "active_category": "1",
+        "file_icon": "files_icon/1_SrFydBu.svg",
+        "lft": 1,
+        "rght": 2,
+        "tree_id": 3,
+        "level": 0
+    }
+}
+]

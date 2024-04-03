@@ -1,0 +1,275 @@
+[
+{
+    "model": "app_shop.product",
+    "pk": 5,
+    "fields": {
+        "is_delete": false,
+        "name": "Телевизор Haier 55 Smart TV S1",
+        "description": "Общие данные:\r\nГабариты (без подставки): 72х123.1х8.2 см\r\nГабариты (с подставкой): 77.4х123.1х26.5 см\r\nШирина подставки: 90 см\r\nДиагональ: 55\"(139.7 см)\r\nРазрешение: 3840x2160",
+        "price": "44990.00",
+        "count_reviews": 0,
+        "category": 3,
+        "limited_edition": false,
+        "count_goods": 100,
+        "free_delivery": false,
+        "number_of_purchases": 0,
+        "active_product": true,
+        "date_product": "2024-04-01T20:48:37.947Z",
+        "tags": [
+            3
+        ]
+    }
+},
+{
+    "model": "app_shop.product",
+    "pk": 6,
+    "fields": {
+        "is_delete": false,
+        "name": "Телевизор Haier H65S9UG PRO",
+        "description": "Габариты (без подставки): 83.4х144.7х6.9 см\r\nГабариты (с подставкой): 85.9х144.7х23.7 см\r\nДиагональ: 65\" (16:9)\r\nРазрешение: 3840x2160\r\nЯркость: 500 cd/m²\r\nУгол обзора: 178/178 °\r\nВремя отклика (мс): 1\r\nРазъемы (вход): USB 2.0 х 2, антенный х 2, CI+ слот, аналоговый аудио, HDMI 2.1 х 3\r\nРазъемы (выход): оптический",
+        "price": "179990.00",
+        "count_reviews": 0,
+        "category": 3,
+        "limited_edition": true,
+        "count_goods": 100,
+        "free_delivery": false,
+        "number_of_purchases": 0,
+        "active_product": true,
+        "date_product": "2024-04-01T21:04:43.106Z",
+        "tags": [
+            3
+        ]
+    }
+},
+{
+    "model": "app_shop.product",
+    "pk": 7,
+    "fields": {
+        "is_delete": false,
+        "name": "Телевизор Haier 43 Smart TV",
+        "description": "Габариты (без подставки): 95.7х56.8х8.6 см\r\nГабариты (с подставкой): 95.7х61.5х21.7 см\r\nДиагональ: 43\"\r\nРазрешение: 3840х2160",
+        "price": "39990.00",
+        "count_reviews": 0,
+        "category": 3,
+        "limited_edition": false,
+        "count_goods": 100,
+        "free_delivery": false,
+        "number_of_purchases": 0,
+        "active_product": true,
+        "date_product": "2024-04-01T21:06:35.249Z",
+        "tags": [
+            3
+        ]
+    }
+},
+{
+    "model": "app_shop.product",
+    "pk": 8,
+    "fields": {
+        "is_delete": false,
+        "name": "Телевизор Philips 55PUS8108/60",
+        "description": "Габариты (без подставки): 72.2x123.1х8.2 см\r\nГабариты (с подставкой): 78x123.1x25.8 см\r\nДиагональ: 54.6\" (138.8 см)\r\nРазрешение: 3840x2160\r\nУгол обзора по горизонтали/вертикали: 178/178°\r\nРазъемы (вход): антенныйx1, HDMIx3, USBх2, RJ45, CI+\r\nРазъемы (выход): цифровой, выход на наушники",
+        "price": "43999.00",
+        "count_reviews": 0,
+        "category": 3,
+        "limited_edition": false,
+        "count_goods": 100,
+        "free_delivery": false,
+        "number_of_purchases": 0,
+        "active_product": true,
+        "date_product": "2024-04-01T21:08:11.171Z",
+        "tags": [
+            3
+        ]
+    }
+},
+{
+    "model": "app_shop.product",
+    "pk": 9,
+    "fields": {
+        "is_delete": false,
+        "name": "Телевизор Haier 58 Smart TV S5",
+        "description": "Габариты (без подставки): 65.1x111.2x7 см\r\nГабариты (с подставкой): 70.6x111.2x29.5 см\r\nДиагональ: 58\" (147 см)\r\nРазрешение: 3840х2160\r\nЯркость: 350 кд/м2\r\nКонтрастность: 5000:1\r\nУгол обзора: 178/178 °\r\nВремя отклика: 8 мс\r\nРазъемы (вход): HDMI 2.1 х 4, USB 2.0 х 2, вход для антенны х 2, композитный, CI+, аналоговый, Ethernet\r\nРазъемы (выход): оптический, выход для наушников",
+        "price": "55990.00",
+        "count_reviews": 0,
+        "category": 3,
+        "limited_edition": false,
+        "count_goods": 100,
+        "free_delivery": false,
+        "number_of_purchases": 0,
+        "active_product": true,
+        "date_product": "2024-04-01T21:10:01.058Z",
+        "tags": [
+            3
+        ]
+    }
+},
+{
+    "model": "app_shop.product",
+    "pk": 10,
+    "fields": {
+        "is_delete": false,
+        "name": "Смартфон Realme C53 6+128 Гб",
+        "description": "Стандарт: 4G LTE, 3G, 2G\r\nВерсия ОС на начало продаж: Android 13\r\nТип корпуса: классический\r\nКоличество SIM-карт: 2\r\nТип SIM-карт: Nano-SIM\r\nРазмеры (ВхШхГ): 16.72х7.67х0.8 см\r\nВес: 186 г",
+        "price": "11990.00",
+        "count_reviews": 0,
+        "category": 4,
+        "limited_edition": false,
+        "count_goods": 100,
+        "free_delivery": false,
+        "number_of_purchases": 0,
+        "active_product": true,
+        "date_product": "2024-04-01T21:12:24.507Z",
+        "tags": [
+            4
+        ]
+    }
+},
+{
+    "model": "app_shop.product",
+    "pk": 11,
+    "fields": {
+        "is_delete": false,
+        "name": "Смартфон Huawei NOVA 11 PRO 8/256 Гб (GOA-LX9) GREEN",
+        "description": "Стандарт: 2G, 3G, 4G LTE\r\nТип: смартфон\r\nОперационная система: EMUI 13\r\nТип корпуса: классический\r\nКоличество SIM-карт: 2\r\nТип SIM-карты: nano SIM\r\nРазмеры: 16.42х7.44х0.79 см\r\nВес: 188 г",
+        "price": "40999.00",
+        "count_reviews": 0,
+        "category": 4,
+        "limited_edition": false,
+        "count_goods": 100,
+        "free_delivery": false,
+        "number_of_purchases": 0,
+        "active_product": true,
+        "date_product": "2024-04-01T21:15:05.132Z",
+        "tags": [
+            4
+        ]
+    }
+},
+{
+    "model": "app_shop.product",
+    "pk": 12,
+    "fields": {
+        "is_delete": false,
+        "name": "Смартфон Realme C53 6+128 Гб",
+        "description": "Стандарт: 4G LTE, 3G, 2G\r\nВерсия ОС на начало продаж: Android 13\r\nТип корпуса: классический\r\nКоличество SIM-карт: 2\r\nТип SIM-карт: Nano-SIM\r\nРазмеры (ВхШхГ): 16.72х7.67х0.8 см\r\nВес: 186 г",
+        "price": "11990.00",
+        "count_reviews": 0,
+        "category": 4,
+        "limited_edition": false,
+        "count_goods": 100,
+        "free_delivery": false,
+        "number_of_purchases": 0,
+        "active_product": true,
+        "date_product": "2024-04-01T21:16:29.750Z",
+        "tags": [
+            4
+        ]
+    }
+},
+{
+    "model": "app_shop.product",
+    "pk": 13,
+    "fields": {
+        "is_delete": false,
+        "name": "Смартфон Poco C65 8GB+256GB Black",
+        "description": "Стандарт: 4G LTE, 3G, 2G\r\nОперационная система: Android 13\r\nКоличество SIM-карт: 2\r\nТип SIM-карты: nano SIM\r\nРазмеры (ВхШхГ): 16.8x7.8x0.809 см\r\nВес: 192 г",
+        "price": "11990.00",
+        "count_reviews": 0,
+        "category": 4,
+        "limited_edition": true,
+        "count_goods": 100,
+        "free_delivery": false,
+        "number_of_purchases": 0,
+        "active_product": true,
+        "date_product": "2024-04-01T21:18:15.784Z",
+        "tags": [
+            4
+        ]
+    }
+},
+{
+    "model": "app_shop.product",
+    "pk": 14,
+    "fields": {
+        "is_delete": false,
+        "name": "Смартфон Poco F5 12GB+256GB White",
+        "description": "Стандарт: GSM 900/1800/1900, 3G, 4G LTE, 5G\r\nТип: смартфон\r\nВерсия ОС: Android 13\r\nТип корпуса: классический\r\nТип SIM-карты: NanoSIM\r\nКоличество SIM-карт: 2\r\nРазмеры: 75x161.1x7.9 мм\r\nВес: 181 г",
+        "price": "41990.00",
+        "count_reviews": 0,
+        "category": 4,
+        "limited_edition": false,
+        "count_goods": 99,
+        "free_delivery": false,
+        "number_of_purchases": 0,
+        "active_product": true,
+        "date_product": "2024-04-01T21:21:11.354Z",
+        "tags": [
+            4
+        ]
+    }
+},
+{
+    "model": "app_shop.product",
+    "pk": 15,
+    "fields": {
+        "is_delete": false,
+        "name": "Ноутбук Machenike L15 Pro Star",
+        "description": "Процессор: Intel Core i5 2.6 ГГц\r\nКод процессора: 13500H\r\nКоличество ядер процессора: 12\r\nПамять: 16 ГБ DDR4 3200 МГц\r\nУстановленная операционная система: DOS",
+        "price": "102998.97",
+        "count_reviews": 0,
+        "category": 5,
+        "limited_edition": true,
+        "count_goods": 100,
+        "free_delivery": false,
+        "number_of_purchases": 0,
+        "active_product": true,
+        "date_product": "2024-04-01T21:24:42.123Z",
+        "tags": [
+            5
+        ]
+    }
+},
+{
+    "model": "app_shop.product",
+    "pk": 16,
+    "fields": {
+        "is_delete": false,
+        "name": "Ноутбук игровой Machenike L17A Pulsar",
+        "description": "Тип экрана: IPS\r\nДиагональ экрана (дюйм): 17.3\"\r\nРазрешение экрана: Full HD (1920x1080)\r\nПокрытие экрана: матовое\r\nСенсорный экран: нет\r\nМаксимальная частота обновления экрана: 144 Гц\r\nЯркость: 250 Кд/м²\r\nВеб камера: 1 Мп",
+        "price": "114990.00",
+        "count_reviews": 0,
+        "category": 5,
+        "limited_edition": false,
+        "count_goods": 100,
+        "free_delivery": false,
+        "number_of_purchases": 0,
+        "active_product": true,
+        "date_product": "2024-04-01T21:26:50.693Z",
+        "tags": [
+            5
+        ]
+    }
+},
+{
+    "model": "app_shop.product",
+    "pk": 17,
+    "fields": {
+        "is_delete": false,
+        "name": "Ноутбук Machenike L15 Star 2K",
+        "description": "Процессор: Intel Core i5 2.6 ГГц\r\nКод процессора: 13500H\r\nКоличество ядер процессора: 12\r\nПамять: 16 ГБ DDR5 4800 МГц\r\nУстановленная операционная система: DOS",
+        "price": "124990.00",
+        "count_reviews": 0,
+        "category": 5,
+        "limited_edition": false,
+        "count_goods": 100,
+        "free_delivery": false,
+        "number_of_purchases": 0,
+        "active_product": true,
+        "date_product": "2024-04-01T21:28:20.288Z",
+        "tags": [
+            5
+        ]
+    }
+}
+]

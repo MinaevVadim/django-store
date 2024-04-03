@@ -1,0 +1,23 @@
+[
+{
+    "model": "app_shop.tag",
+    "pk": 3,
+    "fields": {
+        "name": "Телевизоры"
+    }
+},
+{
+    "model": "app_shop.tag",
+    "pk": 4,
+    "fields": {
+        "name": "Смартфоны"
+    }
+},
+{
+    "model": "app_shop.tag",
+    "pk": 5,
+    "fields": {
+        "name": "Ноутбуки"
+    }
+}
+]

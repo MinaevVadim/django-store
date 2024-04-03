@@ -1,0 +1,18 @@
+{% extends 'app_shop/base.html' %}
+{% block content %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Логин</title>
+</head>
+<body>
+<h2>Вход на сайт</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <a href="{% url 'restore_password' %}">Забыли пароль?</a><br>
+    <br><button class="btn btn-primary" type="submit">Зайти на сайт</button>
+</form>
+</body>
+</html>
+{% endblock %}

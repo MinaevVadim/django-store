@@ -1,0 +1,38 @@
+{% extends 'app_shop/base.html' %}
+{% block content %}
+{% load static %}
+<body class="Site">
+  <div class="Middle Middle_top">
+    <div class="Middle-top">
+      <div class="wrap">
+        <div class="Middle-header">
+          <h1 class="Middle-title">Оплата
+          </h1>
+          <ul class="breadcrumbs Middle-breadcrumbs">
+            <li class="breadcrumbs-item"><a href="{% url 'main' %}">home</a>
+            </li>
+            <li class="breadcrumbs-item breadcrumbs-item_current"><span>Оплата</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="Section">
+      <div class="wrap">
+        <form class="form Payment" method="post">
+          {% csrf_token %}
+          <div class="Payment-card">
+            <div class="form-group">
+              <label class="form-label">Номер карты
+              </label>
+              {{ form.card_number }}
+              {{ form.card_number.errors }}
+            </div>
+          </div>
+          <button class="btn btn-primary" type="submit">оплатить</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+{% endblock %}

@@ -1,0 +1,49 @@
+version: '3.11'
+services:
+  database:
+    image: postgres
+    environment:
+      - POSTGRES_DB=admin
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=admin
+    container_name: database
+    ports:
+      - '5432:5432'
+    volumes:
+      - basedata:/var/lib/postgresql/data
+
+  app:
+    build:
+      context: .
+    ports:
+      - '8000:8000'
+    container_name: app
+    volumes:
+      - ./app_store:/app_store
+    command: >
+      sh -c "python manage.py runserver 0.0.0.0:8000"
+    depends_on:
+      - database
+
+  redis:
+    image: redis:7.0.5-alpine
+    container_name: redis
+    ports:
+      - '6379:6379'
+    depends_on:
+      - app
+
+  worker:
+    build:
+      context: .
+    container_name: celery
+    command: celery -A store worker --loglevel=info
+    volumes:
+      - ./app_store:/app_store
+    links:
+      - redis
+    depends_on:
+      - redis
+
+volumes:
+  basedata: null

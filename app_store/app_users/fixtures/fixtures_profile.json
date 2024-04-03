@@ -1,0 +1,11 @@
+[
+{
+    "model": "app_users.profile",
+    "pk": 1,
+    "fields": {
+        "user": 2,
+        "number": "89117029960",
+        "image_avatar": "avatar_files/Screenshot_from_2023-11-29_01-18-07_ciUuoD4.png"
+    }
+}
+]

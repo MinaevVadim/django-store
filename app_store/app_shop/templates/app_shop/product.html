@@ -1,0 +1,196 @@
+{% extends 'app_shop/base.html' %}
+{% block content %}
+{% load static %}
+<body class="Site">
+  <div class="Middle Middle_top">
+    <div class="Middle-top">
+      <div class="wrap">
+        <div class="Middle-header">
+          <h1 class="Middle-title">Megano Product
+          </h1>
+          <ul class="breadcrumbs Middle-breadcrumbs">
+            <li class="breadcrumbs-item"><a href="{% url 'main' %}">home</a>
+            </li>
+            <li class="breadcrumbs-item breadcrumbs-item_current"><span>Product</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="Section">
+      <div class="wrap">
+        <div class="Product">
+          <div class="ProductCard">
+            <div class="ProductCard-look">
+              <div class="ProductCard-photo">
+                <img src='/media/{{ object.file }}' alt="bigGoods.png"/>
+              </div>
+              <div class="ProductCard-picts">
+                {% for photo in object.file_products.all %}
+                <a class="ProductCard-pict ProductCard-pict_ACTIVE" href='/media/{{ photo.files }}'><img src='/media/{{ photo.files }}' alt="bigGoods.png"/></a>
+                {% endfor %}
+              </div>
+            </div>
+            <div class="ProductCard-desc">
+              <div class="ProductCard-header">
+                <h2 class="ProductCard-title">{{ object.name }}
+                </h2>
+                <div class="ProductCard-info">
+                  <div class="ProductCard-cost">
+                    <div class="ProductCard-price">{{ object.price }} руб.
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="ProductCard-text">
+                <ul>
+                  {{ object.description }}
+                </ul>
+              </div>
+                
+                <form action="{% url 'cart' object.id %}" method="post">
+                {% csrf_token %}
+                <div class="ProductCard-cart">
+                    <div class="ProductCard-cartElement ProductCard-cartElement_amount">
+                      {{ form_count_cart.count_good_basket }}
+                    </div>
+                      <button class="btn btn-primary" type="submit">Добавить в корзину</button>
+                </div>
+                </form>
+            
+              <div class="ProductCard-footer">
+                <div class="ProductCard-tags">
+                  <strong class="ProductCard-tagsTitle">Теги:
+                    {% for i in tags %}
+                  </strong><a href="{% url 'catalog' %}?tags={{ i }}">{{ i }}</a>
+                  {% endfor %}
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="Tabs Tabs_default">
+            <div class="Tabs-links"><a class="Tabs-link_ACTIVE Tabs-link" href="#description"><span>Описание</span></a><a class="Tabs-link" href="#addit"><span>AdditionaL Info</span></a><a class="Tabs-link" href="#reviews"><span>Reviews (3)</span></a>
+            </div>
+            <div class="Tabs-wrap">
+              <div class="Tabs-block" id="description">
+                <h2>Megano Store Hystory
+                </h2>
+                <p>{{ object.description }}
+                <img class="pict pict_right" src='/media/{{ object.file }}' alt="bigGoods.png"/>
+                <div class="clearfix">
+                </div>
+                <div class="table">
+                  <table>
+                    <tr>
+                      <th>Характеристика
+                      </th>
+                      <th>Значение
+                      </th>
+                    </tr>
+                    <tr>
+                      <td>Что-то
+                      </td>
+                      <td>Что-то
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+              <div class="Tabs-block" id="sellers">
+                <div class="Categories Categories_product">
+                </div>
+              </div>
+              <div class="Tabs-block" id="addit">
+                <div class="Product-props">
+                  <div class="Product-prop">
+                    <strong>
+                    </strong><span></span>
+                  </div>
+                  <div class="Product-prop">
+                    <strong>
+                    </strong><span></span>
+                  </div>
+                  <div class="Product-prop">
+                    <strong>
+                    </strong><span></span>
+                  </div>
+                  <div class="Product-prop">
+                    <strong>
+                    </strong><span></span>
+                  </div>
+                </div>
+              </div>
+              <div class="Tabs-block" id="reviews">
+                <header class="Section-header">
+                  <h3 class="Section-title">{{ count_reviews }} отзывов
+                  </h3>
+                </header>
+                <div class="container">
+                <div class="content" id="content">
+                    {% for post in posts %}
+                    <div class="single_content mt-2 pl-2">
+                        <div class="Comments">
+                          <div class="Comment">
+                            <div class="Comment-column Comment-column_pict">
+                                <img class="Comment-avatar" src='/media/{{ post.user.profiles.image_avatar }}'/>
+                            </div>
+                            <div class="Comment-column">
+                              <header class="Comment-header">
+                                <div>
+                                  <strong class="Comment-title">{{ post.name_user }}
+                                  </strong><span class="Comment-date">{{ post.date_comment }}</span>
+                                </div>
+                              </header>
+                              <div class="Comment-content">{{ post.text_comment }}
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                  <div class="spinner-border text-primary mt-2 not-visible" role="status" id="spinner">
+                      <span class="sr-only">Загрузка...</span>
+                  </div>
+                  {% if count_reviews > 3 %}
+                    <p class="text-center">
+                      <button type="button" class="btn btn-primary btn-sm" id="btn">Подгрузить ещё</button>
+                    </p>
+                  {% endif %}
+
+                </div>
+                {{ count_reviews|json_script:"json-total" }}
+
+                {% if request.user.is_authenticated %}
+                <header class="Section-header Section-header_product">
+                  <h3 class="Section-title">Добавить отзыв
+                  </h3>
+                </header>
+
+
+                <div class="Tabs-addComment">
+                  <form class="form" action="" method="post">
+                    {% csrf_token %}
+                    <div class="form-group">
+                      <textarea class="form-textarea" name="text_comment" id="comment" placeholder="Review"></textarea>
+                    </div>
+                    <div class="form-group">
+                      <button class="btn btn_muted" type="submit">Добавить комментарий</button>
+                    </div>
+                  </form>
+                {% else %}
+                  <header class="Section-header Section-header_product">
+                  <h3 class="Section-title"><a href="#">Чтобы оставить отзыв нужно авторизоваться</a>
+                  </h3>
+                  </header>
+                {% endif %}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+{% endblock %}
