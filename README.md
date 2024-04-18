@@ -22,7 +22,7 @@
 * Python 3
 * celery
 * redis
-* sqlite3
+* Postgres
 * HTML, CSS, JavaScript, Bootstrap
 
 ### Установка
