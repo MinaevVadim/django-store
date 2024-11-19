@@ -20,9 +20,11 @@
 
 * Django
 * Python 3
-* celery
-* redis
+* Celery
+* Redis
 * Postgres
+* Pytest, Factory-Boy, Faker
+* Docker, Docker-compose
 * HTML, CSS, JavaScript, Bootstrap
 
 ### Установка
