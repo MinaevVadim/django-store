@@ -9,19 +9,16 @@ class Profile(models.Model):
         User,
         blank=True,
         on_delete=models.CASCADE,
-        related_name='profiles',
-        verbose_name='пользователь'
+        related_name="profiles",
+        verbose_name="пользователь",
     )
-    number = models.CharField(
-        max_length=100,
-        verbose_name='телефон'
-    )
+    number = models.CharField(max_length=100, verbose_name="телефон")
     image_avatar = models.ImageField(
-        upload_to='avatar_files/',
-        blank=True,
-        verbose_name='аватар'
+        upload_to="avatar_files/", blank=True, verbose_name="аватар"
     )
 
+    objects = models.Manager()
+
     class Meta:
-        verbose_name = 'профиль'
-        verbose_name_plural = 'профили'
+        verbose_name = "профиль"
+        verbose_name_plural = "профили"
